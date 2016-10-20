@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="MSW_10_UWA.View.SignUpView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MSW_10_UWA.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=SignUpViewModel}"
+    Background="{StaticResource mswPrimaryColor}">
+
+    <Grid x:Name="LayoutRoot">
+        <Image Source="ms-appx:///Assets/logo_flat_white.png" Margin="40,50,0,0" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <StackPanel Margin="0,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock x:Uid="RegisterFormTitle" Text="Become a composer" HorizontalAlignment="Center" Style="{StaticResource mswFormTitleDarkStyle}"/>
+        </StackPanel>
+        <StackPanel Margin="0,240,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200">
+            <TextBox x:Uid="RegisterFormUsernameTextBox" x:Name="TxtUserName" Text="{Binding UserName, Mode=TwoWay}" PlaceholderText="Username" Style="{StaticResource mswFormInputDarkStyle}"/>
+            <TextBox x:Uid="RegisterFormEmailTextBox" x:Name="TxtEmail" Text="{Binding UserNameEmail, Mode=TwoWay}" PlaceholderText="Email" Style="{StaticResource mswFormInputDarkStyle}"/>
+            <PasswordBox x:Uid="RegisterFormPasswordBox" x:Name="TxtPwd" Password="{Binding UserPassword, Mode=TwoWay}" PlaceholderText="Password" Style="{StaticResource mswFormPasswordInputDarkStyle}"/>
+            <Button x:Uid="RegisterFormButton" Name="BtnSubmit" Content="Sign up" Style="{StaticResource mswButtonStyle}" HorizontalAlignment="Center" Command="{Binding SignUpCommandSignUpPage}"/>
+        </StackPanel>
+    </Grid>
+</Page>

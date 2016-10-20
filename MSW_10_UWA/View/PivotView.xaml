@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="MSW_10_UWA.View.PivotView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MSW_10_UWA.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource mswPrimaryColor}"
+    DataContext="{Binding Source={StaticResource Locator}, Path=PivotViewModel}">
+    
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <CommonNavigationTransitionInfo IsStaggeringEnabled="True"/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    
+    <Pivot x:Name="rootPivot" Title="Music Sheet Writer" CommonNavigationTransitionInfo.IsStaggerElement="True">
+
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Foreground="{StaticResource mswTextIconsColor}"/>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            
+            <Pivot.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Foreground="{StaticResource mswTextIconsColor}"/>
+                </DataTemplate>
+            </Pivot.TitleTemplate>
+
+            <PivotItem x:Uid="LibraryPivot" Margin="19,14.5,0,0" Header="Partitions">
+            <StackPanel>
+                <Button x:Uid="MyScoresTextBlock" x:Name="MyScoresTextBlock" Content="My Scores" Style="{StaticResource mswButtonStyle}" BorderBrush="#3F51B5"  Background="#3F51B5" Command="{Binding MyScoreCommandPivotPage}"/>
+                <Button x:Uid="MyFavoritesTextBlock" x:Name="MyFavoritesTextBlock" Content="My Favourites" Style="{StaticResource mswButtonStyle}" BorderBrush="#3F51B5"  Background="#3F51B5" Command="{Binding MyFavouritesCommandPivotPage}"/>
+            </StackPanel>
+            </PivotItem>
+
+            <PivotItem x:Uid="ConservatoryPivot" Margin="19,14.5,0,0" Header="Conservatory">
+                <StackPanel>
+                <Button x:Uid="MusesTextBlock" x:Name="MusesTextBlock" Content="My Muses" Style="{StaticResource mswButtonStyle}" BorderBrush="#3F51B5"  Background="#3F51B5" Command="{Binding MyMuseCommandPivotPage}"/>
+                <Button x:Uid="FanPageTitleTextBlock" x:Name="FansTextBlock" Content="My Fans" Style="{StaticResource mswButtonStyle}" BorderBrush="#3F51B5"  Background="#3F51B5" Command="{Binding MyFanCommandPivotPage}"/>
+            </StackPanel>
+            </PivotItem>
+            
+        </Pivot>
+
+        <Page.BottomAppBar>
+            <CommandBar Background="{StaticResource mswPrimaryLightColor}" Foreground="{StaticResource mswPrimaryTextColor}">
+            <AppBarButton x:Uid="SearchAppBarButton" x:Name="SearchAppBarButton" Label="Search" Icon="Zoom" Command="{Binding SearchCommandSearchPage}"/>
+            <AppBarButton x:Uid="AccountAppBarButton" x:Name="AccountAppBarButton" Label="Studio" Icon="Contact" Command="{Binding AccountCommandAccountPage}"/>
+            <AppBarButton x:Uid="LogoutAppBarButton" x:Name="LogoutAppBarButton" Label="Logout" Icon="Cancel" Command="{Binding LogOutCommandPivotPage}"/>
+            </CommandBar>
+        </Page.BottomAppBar>
+
+</Page>
+
