@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MSW_10_UWA.Common;
+using MSW_10_UWA.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,21 @@ namespace MSW_10_UWA.View
         public MyScoreView()
         {
             this.InitializeComponent();
+        }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var s = sender as CheckBox;
+            System.Diagnostics.Debug.WriteLine(s.IsChecked);
+
+            var score = s.DataContext as Score;
+            System.Diagnostics.Debug.WriteLine("Affichage donnée score my favourite => " + score.Id + " " + score.Title);
+
+            AddDeleteFavourites elem = new AddDeleteFavourites();
+            if (s.IsChecked == true)
+                elem.addNouveauFavourites(score.Id);
+            else
+                elem.deleteFavourites(score.Id);
         }
     }
 }

@@ -36,7 +36,7 @@
                             </Ellipse.Fill>
                         </Ellipse>
                         <TextBlock Text="{Binding UserName}" Margin="10,0,0,0" VerticalAlignment="Center" Style="{StaticResource mswUsernameTextBlockDarkStyle}"/>
-                        <CheckBox  IsChecked="{Binding IsASubscription, Mode=TwoWay}" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <CheckBox x:ConnectionId='5'  IsChecked="{Binding IsASubscription, Mode=TwoWay}" VerticalAlignment="Center" Margin="10,0,0,0"                       />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -10,13 +10,13 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ea97461b-e17e-49fd-a08a-d548c51b0431</PackageIdentityName>
     <PackageIdentityPublisher>CN=simon</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>A59BE56DDA380D1CE7E81EF12EC3F1BF95604C9124DBD25C778171CA7371499E</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>46E4782525BEB20DE4649C8917ADEF78914DD876A98582971FAB11A15A50F29A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ea97461b-e17e-49fd-a08a-d548c51b0431_1.0.0.0_x86__js6sv2v871ap0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ea97461b-e17e-49fd-a08a-d548c51b0431_js6sv2v871ap0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ea97461b-e17e-49fd-a08a-d548c51b0431</RegisteredPackageID>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-14T07:44:46.842</Modified>
+      <Modified>2016-10-20T14:39:49.667</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\bin\x86\Debug\MSW_10_UWA.exe">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\bin\x86\Debug\MSW_10_UWA.exe">
       <PackagePath>entrypoint\MSW_10_UWA.exe</PackagePath>
-      <Modified>2016-10-14T07:44:35.369</Modified>
+      <Modified>2016-10-20T14:39:40.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\simon\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -472,75 +472,75 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T21:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <Modified>2016-08-27T15:47:13.850</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\logo_flat_black.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\logo_flat_black.png">
       <PackagePath>Assets\logo_flat_black.png</PackagePath>
       <Modified>2016-08-27T15:47:13.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\logo_flat_blue.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\logo_flat_blue.png">
       <PackagePath>Assets\logo_flat_blue.png</PackagePath>
       <Modified>2016-08-27T15:47:13.955</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\logo_flat_white.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\logo_flat_white.png">
       <PackagePath>Assets\logo_flat_white.png</PackagePath>
       <Modified>2016-08-27T15:47:13.987</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:14.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:14.081</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:13.850</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\Square71x71Logo.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\Square71x71Logo.png">
       <PackagePath>Assets\Square71x71Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:14.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:14.184</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-08-27T15:47:14.239</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Assets\WideLogo.png">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Assets\WideLogo.png">
       <PackagePath>Assets\WideLogo.png</PackagePath>
       <Modified>2016-08-27T15:47:14.239</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-08-26T10:22:31.366</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\bin\x86\Debug\MSW_10_UWA.xr.xml">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\bin\x86\Debug\MSW_10_UWA.xr.xml">
       <PackagePath>MSW_10_UWA.xr.xml</PackagePath>
-      <Modified>2016-10-12T23:54:56.594</Modified>
+      <Modified>2016-10-20T14:19:04.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-08-05T04:44:05.682</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-10-12T23:55:08.568</Modified>
+      <Modified>2016-10-20T14:19:17.895</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\simon\Documents\Visual Studio 2015\Projects\MSW_10_UWA\MSW_10_UWA\bin\x86\Debug\Core\MSW_10_UWA.exe">
+    <AppxPackagedFile Include="C:\Users\simon\Documents\GitHub\C-Sharp\MSW_10_UWA\bin\x86\Debug\Core\MSW_10_UWA.exe">
       <PackagePath>MSW_10_UWA.exe</PackagePath>
-      <Modified>2016-10-14T07:44:46.747</Modified>
+      <Modified>2016-10-20T14:39:49.616</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MSW_10_UWA.Common;
+using Music_Sheet_Writer.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,20 @@ namespace MSW_10_UWA.View
         public MyMuseSelectedView()
         {
             this.InitializeComponent();
+        }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var s = sender as CheckBox;
+            System.Diagnostics.Debug.WriteLine("Checkbox => " + s.IsChecked);
+            var user = s.DataContext as User;
+            System.Diagnostics.Debug.WriteLine("Affichage donnée user search => " + user.Id + " " + user.UserName);
+
+            AddDeleteFavourites elem = new AddDeleteFavourites();
+            if (s.IsChecked == true)
+                elem.addNouvelAbonnement(user.Id);
+            else
+                elem.deleteAbonnement(user.Id);
         }
     }
 }

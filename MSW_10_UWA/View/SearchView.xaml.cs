@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MSW_10_UWA.Common;
+using MSW_10_UWA.Models;
+using Music_Sheet_Writer.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +40,35 @@ namespace MSW_10_UWA.View
         {
             var s = sender as PivotItem;
             s.Foreground = Application.Current.Resources["mswPrimaryLightColor"] as Brush;
+        }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var s = sender as CheckBox;
+            System.Diagnostics.Debug.WriteLine(s.IsChecked);
+
+            var score = s.DataContext as Score;
+            System.Diagnostics.Debug.WriteLine("Affichage donnée score search => " + score.Id + " " + score.Title);
+
+            AddDeleteFavourites elem = new AddDeleteFavourites();
+            if (s.IsChecked == true)
+                elem.addNouveauFavourites(score.Id);
+            else
+                elem.deleteFavourites(score.Id);
+        }
+
+        private void CheckBox_Click_1(object sender, RoutedEventArgs e)
+        {
+            var s = sender as CheckBox;
+            System.Diagnostics.Debug.WriteLine("Checkbox => " + s.IsChecked);
+            var user = s.DataContext as User;
+            System.Diagnostics.Debug.WriteLine("Affichage donnée user search => " + user.Id + " " + user.UserName);
+
+            AddDeleteFavourites elem = new AddDeleteFavourites();
+            if (s.IsChecked == true)
+                elem.addNouvelAbonnement(user.Id);
+            else
+                elem.deleteAbonnement(user.Id);
         }
     }
 }

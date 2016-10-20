@@ -65,16 +65,6 @@ namespace MSW_10_UWA.Models
             {
                 is_Favourite = value;
                 OnPropertyChanged("Is_Favourite");
-                if (is_Favourite == true)
-                {
-                    System.Diagnostics.Debug.WriteLine("Is_Favourite click unchecked event!!!");
-                    addNouveauFavourites(Id);
-                }
-                else
-                {
-                    System.Diagnostics.Debug.WriteLine("Is_Favourite click unchecked event!!!");
-                    deleteFavourites(Id);
-                }
             }
         }
 
@@ -100,38 +90,6 @@ namespace MSW_10_UWA.Models
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void doDeleteFavourites(object sender, EventArgs e)
-        {
-            HTTPRequest connect = (HTTPRequest)sender;
-            System.Diagnostics.Debug.WriteLine("##################  delete favourite  #######################");
-            System.Diagnostics.Debug.WriteLine(connect.Response);
-        }
-
-        private void deleteFavourites(int delId)
-        {
-            Globals value_user = null;
-            value_user = Globals.getInstance();
-            HTTPRequest connect = new HTTPRequest();
-            connect.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doDeleteFavourites);
-            connect.HttpDeleteRequest(value_user.IpAPI + "api/users/" + value_user.UserConnected + "/scores/favourites/" + delId);
-        }
-
-        private void doAddNouveauFavourites(object sender, EventArgs e)
-        {
-            HTTPRequest connect = (HTTPRequest)sender;
-            System.Diagnostics.Debug.WriteLine("##################  Add favourtie  #######################");
-            System.Diagnostics.Debug.WriteLine(connect.Response);
-        }
-
-        private void addNouveauFavourites(int addId)
-        {
-            Globals value_user = null;
-            value_user = Globals.getInstance();
-            HTTPRequest connect = new HTTPRequest();
-            connect.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doAddNouveauFavourites);
-            connect.HttpPostRequest(value_user.IpAPI + "api/users/" + value_user.UserConnected + "/scores/favourites", "{ \"id\": " + addId + " }");
         }
     }
 }

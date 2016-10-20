@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\AddDeleteFavourites.cs" />
     <Compile Include="Common\Globals.cs" />
     <Compile Include="Common\HandleErrorHttp.cs" />
     <Compile Include="Common\HTTPRequest.cs" />
