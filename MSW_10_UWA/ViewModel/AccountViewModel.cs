@@ -147,7 +147,9 @@ namespace MSW_10_UWA.ViewModel
             test_global = Globals.getInstance();
 
             if (_user.PictureURL.Equals(""))
+            {
                 _user.PictureURL = test_global.IpAPI + "bundles/msw/images/default_avatar.png";
+            }
                 //_user.PictureURL = "https://musicsheetwriter.tk/bundles/msw/images/default_avatar.png";
             PictureURL = new BitmapImage(new Uri(_user.PictureURL, UriKind.Absolute));
             Message = _user.Message;

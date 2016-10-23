@@ -13,7 +13,7 @@
         <Grid>
             <Ellipse Margin="10,10,0,0" Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left" Stroke="{StaticResource mswAccentColor}" StrokeThickness="2">
                 <Ellipse.Fill>
-                    <ImageBrush x:Name="UserImage" ImageSource="http://localhost/trunk/web/app_dev.php/bundles/msw/images/default_avatar.png"/>
+                    <ImageBrush x:Name="UserImage" ImageSource="{Binding PictureURL, Mode=TwoWay}"/>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock x:Name="UsernameTextBlock" Text="{Binding UserName, Mode=TwoWay}" Margin="120,20,0,0" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource mswUsernameTextBlockDarkStyle}"/>

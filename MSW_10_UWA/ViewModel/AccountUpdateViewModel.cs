@@ -40,20 +40,8 @@ namespace MSW_10_UWA.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private FileOpenPickerContinuationEventArgs _continuationArgs = null;
         private string contentType;
         byte[] byteArray;
-
-        public FileOpenPickerContinuationEventArgs ContinuationArgs
-        {
-            get { return _continuationArgs; }
-            set
-            {
-                _continuationArgs = value;
-                ContinueFileOpenPicker(_continuationArgs);
-            }
-        }
-
 
         private String username;
         public String UserName
@@ -141,11 +129,15 @@ namespace MSW_10_UWA.ViewModel
                 connect.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doEditProfile);
                 connect.HttpPutRequest(test_global.IpAPI + "api/users/" + _user.Id + "/personal_data", "{ \"firstname\":\"" + FirstName + "\",\n\"lastname\":\"" + LastName + "\",\n\"email\":\"" + _user.Email + "\",\n\"message\":\"" + Message + "\" }");
 
-                /*
+                System.Diagnostics.Debug.WriteLine("byteArray => " + byteArray);
+                System.Diagnostics.Debug.WriteLine("contentType => " + contentType);
+
+                
                 HTTPRequest connect_sec = new HTTPRequest();
                 connect_sec.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doEditProfile2);
                 connect_sec.HttpPutRequestUpload(test_global.IpAPI + "api/users/" + _user.Id + "/photo", byteArray, contentType);
-                */
+                
+
                 INavigationService navigationService = SimpleIoc.Default.GetInstance<INavigationService>();
                 Messenger.Default.Send(_loginResponse);
                 navigationService.GoBack();
@@ -173,7 +165,7 @@ namespace MSW_10_UWA.ViewModel
                 navigationService.NavigateTo(ViewModelLocator.NavigationChangePasswordView);
             });
 
-            ImageProfileCommandAccountUpdateViewModel = new RelayCommand(() =>
+            ImageProfileCommandAccountUpdateViewModel = new RelayCommand(async () =>
             {
                 FileOpenPicker openPicker = new FileOpenPicker();
                 openPicker.ViewMode = PickerViewMode.Thumbnail;
@@ -184,8 +176,33 @@ namespace MSW_10_UWA.ViewModel
                 openPicker.FileTypeFilter.Add(".gif");
                 openPicker.FileTypeFilter.Add(".ico");
 
-                //await openPicker.PickSingleFileAsync();
-                openPicker.PickSingleFileAndContinue();
+                StorageFile file = await openPicker.PickSingleFileAsync();
+                if (file != null)
+                {
+                    // Application now has read/write access to the picked file
+                    System.Diagnostics.Debug.WriteLine("Picked photo: " + file.Name);
+                    contentType = file.ContentType;
+                    
+                    Stream requestStream = await file.OpenStreamForReadAsync();
+                    byteArray = null;
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        await requestStream.CopyToAsync(ms);
+                        byteArray = ms.ToArray();
+                    }
+                    StorageFile storageFile = file;
+                    var stream = await storageFile.OpenAsync(FileAccessMode.Read);
+                    var bitmapImage = new BitmapImage();
+                    await bitmapImage.SetSourceAsync(stream);
+
+                    var decodeur = await BitmapDecoder.CreateAsync(stream);
+                    PictureURL = bitmapImage;
+                    
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("Operation cancelled.");
+                }
             });
         }
 
@@ -197,32 +214,6 @@ namespace MSW_10_UWA.ViewModel
         private void doEditProfile2(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("wait de l'élement en envoie :)");
-        }
-
-        public async void ContinueFileOpenPicker(FileOpenPickerContinuationEventArgs args)
-        {
-            if (args.Files.Count > 0)
-            {
-                contentType = args.Files[0].ContentType;
-                Stream requestStream = await args.Files[0].OpenStreamForReadAsync();
-                byteArray = null;
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    await requestStream.CopyToAsync(ms);
-                    byteArray = ms.ToArray();
-                }
-                StorageFile storageFile = args.Files[0];
-                var stream = await storageFile.OpenAsync(FileAccessMode.Read);
-                var bitmapImage = new BitmapImage();
-                await bitmapImage.SetSourceAsync(stream);
-
-                var decodeur = await BitmapDecoder.CreateAsync(stream);
-                PictureURL = bitmapImage;
-            }
-            else
-            {
-                System.Diagnostics.Debug.WriteLine("Operation cancelled.");
-            }
         }
 
         private void AccountInformationDisplay()

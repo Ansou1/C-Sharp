@@ -19,7 +19,6 @@ namespace MSW_10_UWA.ViewModel
     {
         private string _loginResponse;
         private string _userID;
-        private User _user;
 
         public ICommand SubmitCommandChangePasswordViewModel { get; private set; }
         public ICommand CancelCommandAccountUpdateViewModel { get; private set; }

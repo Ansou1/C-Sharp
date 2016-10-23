@@ -13,7 +13,7 @@
     <Grid>
         <Grid>
             <Button Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="100" Width="110" Command="{Binding ImageProfileCommandAccountUpdateViewModel}">
-                <Image x:Name="UserImage" Height="100" Width="110" Source="http://localhost/trunk/web/app_dev.php/bundles/msw/images/default_avatar.png"/>
+                <Image x:Name="UserImage" Height="100" Width="110" Source="{Binding PictureURL, Mode=TwoWay}"/>
             </Button>
             <TextBox x:Name="UsernameTextBlock" PlaceholderText="Username" Text="{Binding UserName, Mode=TwoWay}" Style="{StaticResource mswFormInputDarkStyle}" Width="260" Margin="125,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True"/>
             <TextBox x:Name="FirstnameTextBlock" PlaceholderText="Firstname" Text="{Binding FirstName, Mode=TwoWay}" Style="{StaticResource mswFormInputDarkStyle}" Width="260" Margin="125,40,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
