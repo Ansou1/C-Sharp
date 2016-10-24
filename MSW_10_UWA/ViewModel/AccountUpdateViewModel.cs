@@ -118,6 +118,8 @@ namespace MSW_10_UWA.ViewModel
                 System.Diagnostics.Debug.WriteLine(_loginResponse);
                 JsonTools test = new JsonTools();
                 _userID = test.JsonGetIdUser(_loginResponse);
+                byteArray = null;
+                contentType = null;
                 AccountInformationDisplay();
             });
 
@@ -132,11 +134,12 @@ namespace MSW_10_UWA.ViewModel
                 System.Diagnostics.Debug.WriteLine("byteArray => " + byteArray);
                 System.Diagnostics.Debug.WriteLine("contentType => " + contentType);
 
-                
-                HTTPRequest connect_sec = new HTTPRequest();
-                connect_sec.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doEditProfile2);
-                connect_sec.HttpPutRequestUpload(test_global.IpAPI + "api/users/" + _user.Id + "/photo", byteArray, contentType);
-                
+                if (contentType != null && byteArray != null)
+                {
+                    HTTPRequest connect_sec = new HTTPRequest();
+                    connect_sec.RequestFinished += new HTTPRequest.RequestFinishedEventHandler(this.doEditProfile2);
+                    connect_sec.HttpPutRequestUpload(test_global.IpAPI + "api/users/" + _user.Id + "/photo", byteArray, contentType);
+                }
 
                 INavigationService navigationService = SimpleIoc.Default.GetInstance<INavigationService>();
                 Messenger.Default.Send(_loginResponse);
@@ -179,7 +182,6 @@ namespace MSW_10_UWA.ViewModel
                 StorageFile file = await openPicker.PickSingleFileAsync();
                 if (file != null)
                 {
-                    // Application now has read/write access to the picked file
                     System.Diagnostics.Debug.WriteLine("Picked photo: " + file.Name);
                     contentType = file.ContentType;
                     

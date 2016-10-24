@@ -11,6 +11,7 @@
     <RootPropertyPathName Name="EMail" />
     <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="UserName" />
+    <RootPropertyPathName Name="PictureURL" />
     <RootPropertyPathName Name="LogOutCommandAccountSelectedPage" />
     <RootPropertyPathName Name="AccountUpdateViewModel" />
     <RootPropertyPathName Name="Email" />
@@ -40,7 +41,6 @@
     <RootPropertyPathName Name="UserClick" />
     <RootPropertyPathName Name="UserList" />
     <RootPropertyPathName Name="IsASubscription" />
-    <RootPropertyPathName Name="PictureURL" />
     <RootPropertyPathName Name="SelectedUserCommandMyFanSelectedViewModel" />
     <RootPropertyPathName Name="LogOutCommandMyFanSelectedViewModel" />
     <RootPropertyPathName Name="SearchCommandMyFanSelectedViewModel" />
