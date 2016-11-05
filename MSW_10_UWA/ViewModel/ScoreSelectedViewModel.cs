@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
 using MSW_10_UWA.Common;
+using MSW_10_UWA.Models;
 using MusicSheetWriter;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace MSW_10_UWA.ViewModel
 {
     class ScoreSelectedViewModel : INotifyPropertyChanged
     {
+        private Score score_selected;
+
         public ICommand LogOutCommandScoreSelectedViewModel { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -45,9 +48,10 @@ namespace MSW_10_UWA.ViewModel
 
         public ScoreSelectedViewModel()
         {
-            Messenger.Default.Register<String>(this, loginResponse =>
+            Messenger.Default.Register<Score>(this, score =>
             {
-                LocationPreview = loginResponse;
+                score_selected = score;
+                LocationPreview = score.LocationPreview;
             });
 
             LogOutCommandScoreSelectedViewModel = new RelayCommand(() => 
