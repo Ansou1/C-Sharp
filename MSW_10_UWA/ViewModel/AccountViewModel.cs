@@ -152,6 +152,20 @@ namespace MSW_10_UWA.ViewModel
             }
                 //_user.PictureURL = "https://musicsheetwriter.tk/bundles/msw/images/default_avatar.png";
             PictureURL = new BitmapImage(new Uri(_user.PictureURL, UriKind.Absolute));
+
+            Boolean debug = true;
+
+            if (debug)
+            {
+                var Str = _user.PictureURL.Substring(6);
+                var httpstring = "http:" + Str;
+                PictureURL = new BitmapImage(new Uri(httpstring, UriKind.Absolute));
+            }
+            else
+            {
+                PictureURL = new BitmapImage(new Uri(_user.PictureURL, UriKind.Absolute));
+            }
+
             Message = _user.Message;
         }
     }
