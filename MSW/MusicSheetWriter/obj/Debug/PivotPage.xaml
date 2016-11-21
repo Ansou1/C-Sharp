@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="MusicSheetWriter.PivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicSheetWriter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:data="using:MusicSheetWriter.Data"
+    mc:Ignorable="d"
+    Background="{StaticResource mswPrimaryColor}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <CommonNavigationTransitionInfo IsStaggeringEnabled="True"/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <Pivot x:Uid="Pivot" x:Name="pivot" Title="Music Sheet Writer" CommonNavigationTransitionInfo.IsStaggerElement="True">
+        <Pivot.HeaderTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding}" Foreground="{StaticResource mswTextIconsColor}"/>
+            </DataTemplate>
+        </Pivot.HeaderTemplate>
+        <Pivot.TitleTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding}" Foreground="{StaticResource mswTextIconsColor}"/>
+            </DataTemplate>
+        </Pivot.TitleTemplate>
+
+        <PivotItem x:Uid="LibraryPivot" Margin="19,14.5,0,0" Header="Partitions">
+            <StackPanel>
+                <TextBlock x:ConnectionId='3' x:Uid="MyScoresTextBlock" x:Name="MyScoresTextBlock" Text="My scores" Style="{StaticResource mswTitleLinkDarkStyle}"                                  />
+                <TextBlock x:ConnectionId='4' x:Uid="MyFavoritesTextBlock" x:Name="MyFavoritesTextBlock" Text="My favourites" Style="{StaticResource mswTitleLinkDarkStyle}"                                     />
+            </StackPanel>
+        </PivotItem>
+
+        <PivotItem x:Uid="ConservatoryPivot" Margin="19,14.5,0,0" Header="Conservatory">
+            <StackPanel>
+                <TextBlock x:ConnectionId='1' x:Uid="MusesTextBlock" x:Name="MusesTextBlock" Text="My Muses" Style="{StaticResource mswTitleLinkDarkStyle}"                               />
+                <TextBlock x:ConnectionId='2' x:Uid="FanPageTitleTextBlock" x:Name="FansTextBlock" Text="My fans" Style="{StaticResource mswTitleLinkDarkStyle}"                              />
+            </StackPanel>
+        </PivotItem>
+    </Pivot>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="{StaticResource mswPrimaryLightColor}" Foreground="{StaticResource mswPrimaryTextColor}">
+            <AppBarButton x:ConnectionId='5' x:Uid="SearchAppBarButton" x:Name="SearchAppBarButton" Label="Search" Icon="Zoom"                                 />
+            <AppBarButton x:ConnectionId='6' x:Uid="AccountAppBarButton" x:Name="AccountAppBarButton" Label="Studio" Icon="Contact"                                  />
+            <AppBarButton x:ConnectionId='7' x:Uid="LogoutAppBarButton" x:Name="LogoutAppBarButton" Label="Logout" Icon="Cancel"                                 />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+

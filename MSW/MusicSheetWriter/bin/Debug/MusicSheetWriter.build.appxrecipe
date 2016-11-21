@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-0DJA3AG</Machine>
+    <WindowsUser>simon</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>0e1e1f80-3452-4fe9-be94-ecbfed60fc53</PackageIdentityName>
+    <PackageIdentityPublisher>CN=simon_000</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\obj\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\MusicSheetWriter.exe">
+      <PackagePath>MusicSheetWriter.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\logo_flat_white.png">
+      <PackagePath>Assets\logo_flat_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\logo_flat_black.png">
+      <PackagePath>Assets\logo_flat_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\logo_flat_blue.png">
+      <PackagePath>Assets\logo_flat_blue.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\StoreManifest.xml">
+      <PackagePath>StoreManifest.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\DataModel\SampleData.json">
+      <PackagePath>DataModel\SampleData.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\MusicSheetWriter.xr.xml">
+      <PackagePath>MusicSheetWriter.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\AccountPage.xbf">
+      <PackagePath>AccountPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\AccountViewer.xbf">
+      <PackagePath>AccountViewer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\AccountViewerView.xbf">
+      <PackagePath>AccountViewerView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\ChangePasswordPage.xbf">
+      <PackagePath>ChangePasswordPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\DisplayScore.xbf">
+      <PackagePath>DisplayScore.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\DisplayUser.xbf">
+      <PackagePath>DisplayUser.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\FanPage.xbf">
+      <PackagePath>FanPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\Forgotten_Password.xbf">
+      <PackagePath>Forgotten_Password.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\ItemPage.xbf">
+      <PackagePath>ItemPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\Login_Page.xbf">
+      <PackagePath>Login_Page.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\MusePage.xbf">
+      <PackagePath>MusePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\MyFavoritePage.xbf">
+      <PackagePath>MyFavoritePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\MyScorePage.xbf">
+      <PackagePath>MyScorePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\PivotPage.xbf">
+      <PackagePath>PivotPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\PreviewImageScore.xbf">
+      <PackagePath>PreviewImageScore.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\SearchPage.xbf">
+      <PackagePath>SearchPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\Sign_Up.xbf">
+      <PackagePath>Sign_Up.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\simon\Desktop\musicsheetwriter\WindowsPhone\trunk\MusicSheetWriter\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
